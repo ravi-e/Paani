@@ -325,7 +325,7 @@ fun WaterReminderAppScreen(
                             text = "Senior Hydration Companion",
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
-                            color = if (isSystemInDarkTheme()) Color(0xFFC6C8B9) else Color(0xFF43493E)
+                            color = if (isSystemInDarkTheme()) Color(0xFFF8FAFC) else Color(0xFF43493E)
                         )
                     }
 
@@ -338,7 +338,7 @@ fun WaterReminderAppScreen(
                         modifier = Modifier
                             .size(48.dp)
                             .background(
-                                color = if (isSystemInDarkTheme()) Color(0xFF232620) else Color(0xFFECEFE9),
+                                color = if (isSystemInDarkTheme()) Color(0xFF1E293B) else Color(0xFFECEFE9),
                                 shape = CircleShape
                             )
                     ) {
@@ -481,7 +481,7 @@ fun WaterProgressCard(
                 text = "Glasses Drunk Today (Goal: $target)",
                 fontSize = 15.sp,
                 fontWeight = FontWeight.Bold,
-                color = if (isSystemInDarkTheme()) Color(0xFFC6C8B9) else Color(0xFF43493E)
+                color = if (isSystemInDarkTheme()) Color(0xFFF8FAFC) else Color(0xFF43493E)
             )
         }
 
@@ -541,13 +541,13 @@ fun WaterProgressCard(
                     text = "Goal Progress",
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
-                    color = if (isSystemInDarkTheme()) Color(0xFFC6C8B9) else Color(0xFF43493E)
+                    color = if (isSystemInDarkTheme()) Color(0xFFF8FAFC) else Color(0xFF43493E)
                 )
                 Text(
                     text = "${(progress * 100).toInt()}% Done",
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Black,
-                    color = if (isSystemInDarkTheme()) Color(0xFF81C784) else Color(0xFF386A20)
+                    color = if (isSystemInDarkTheme()) Color(0xFF22D3EE) else Color(0xFF386A20)
                 )
             }
 
@@ -559,14 +559,14 @@ fun WaterProgressCard(
                     .height(10.dp)
                     .clip(RoundedCornerShape(50)),
                 color = Color(0xFF0061A4),
-                trackColor = if (isSystemInDarkTheme()) Color(0xFF5C6354).copy(alpha = 0.3f) else Color(0xFFC6C8B9).copy(alpha = 0.3f)
+                trackColor = if (isSystemInDarkTheme()) Color(0xFF334155).copy(alpha = 0.3f) else Color(0xFFC6C8B9).copy(alpha = 0.3f)
             )
 
             // Dynamic encouraging state text inside non-overflow box
             if (glassesCount >= target) {
                 Card(
                     colors = CardDefaults.cardColors(
-                        containerColor = if (isSystemInDarkTheme()) Color(0xFF1E2F1B) else Color(0xFFE7E9D9)
+                        containerColor = if (isSystemInDarkTheme()) Color(0xFF1E293B) else Color(0xFFE7E9D9)
                     ),
                     modifier = Modifier
                         .fillMaxWidth()
@@ -575,7 +575,7 @@ fun WaterProgressCard(
                 ) {
                     Text(
                         text = "🎉 Spectacular job! Daily hydration completed! 🎉",
-                        color = if (isSystemInDarkTheme()) Color(0xFFB1F1A4) else Color(0xFF386A20),
+                        color = if (isSystemInDarkTheme()) Color(0xFF22D3EE) else Color(0xFF386A20),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
                         textAlign = TextAlign.Center,
@@ -876,19 +876,19 @@ fun SnoozeController(
         ) {
             HorizontalDivider(
                 modifier = Modifier.weight(1f),
-                color = if (isSystemInDarkTheme()) Color(0xFF43493E) else Color(0xFFC6C8B9),
+                color = if (isSystemInDarkTheme()) Color(0xFF1E293B) else Color(0xFFC6C8B9),
                 thickness = 1.5.dp
             )
             Text(
                 text = "SNOOZE FOR LATER",
                 fontSize = 11.sp,
                 fontWeight = FontWeight.Black,
-                color = if (isSystemInDarkTheme()) Color(0xFFC6C8B9).copy(alpha = 0.8f) else Color(0xFF43493E).copy(alpha = 0.8f),
+                color = if (isSystemInDarkTheme()) Color(0xFFF8FAFC).copy(alpha = 0.8f) else Color(0xFF43493E).copy(alpha = 0.8f),
                 letterSpacing = 1.2.sp
             )
             HorizontalDivider(
                 modifier = Modifier.weight(1f),
-                color = if (isSystemInDarkTheme()) Color(0xFF43493E) else Color(0xFFC6C8B9),
+                color = if (isSystemInDarkTheme()) Color(0xFF1E293B) else Color(0xFFC6C8B9),
                 thickness = 1.5.dp
             )
         }
@@ -931,12 +931,12 @@ fun TactileSnoozeButton(
             .height(56.dp)
             .border(
                 width = 2.dp,
-                color = if (isSystemInDarkTheme()) Color(0xFF5C6354) else Color(0xFFD1E4FF),
+                color = if (isSystemInDarkTheme()) Color(0xFF334155) else Color(0xFFD1E4FF),
                 shape = RoundedCornerShape(16.dp)
             ),
         shape = RoundedCornerShape(16.dp),
         colors = ButtonDefaults.buttonColors(
-            containerColor = if (isSystemInDarkTheme()) Color(0xFF232620) else Color.White,
+            containerColor = if (isSystemInDarkTheme()) Color(0xFF1E293B) else Color.White,
             contentColor = Color(0xFF0061A4)
         ),
         contentPadding = PaddingValues(0.dp)
@@ -955,7 +955,7 @@ fun TactileSnoozeButton(
                 text = label.uppercase(),
                 fontSize = 10.sp,
                 fontWeight = FontWeight.Black,
-                color = if (isSystemInDarkTheme()) Color(0xFFC6C8B9).copy(alpha = 0.6f) else Color(0xFF43493E).copy(alpha = 0.6f)
+                color = if (isSystemInDarkTheme()) Color(0xFFF8FAFC).copy(alpha = 0.6f) else Color(0xFF43493E).copy(alpha = 0.6f)
             )
         }
     }
@@ -1012,7 +1012,7 @@ fun SettingsDialog(
                 }
 
                 HorizontalDivider(
-                    color = if (isSystemInDarkTheme()) Color(0xFF43493E) else Color(0xFFC6C8B9),
+                    color = if (isSystemInDarkTheme()) Color(0xFF1E293B) else Color(0xFFC6C8B9),
                     thickness = 1.dp
                 )
 
@@ -1025,7 +1025,7 @@ fun SettingsDialog(
                 )
 
                 HorizontalDivider(
-                    color = if (isSystemInDarkTheme()) Color(0xFF43493E) else Color(0xFFC6C8B9),
+                    color = if (isSystemInDarkTheme()) Color(0xFF1E293B) else Color(0xFFC6C8B9),
                     thickness = 1.dp
                 )
 
@@ -1038,7 +1038,7 @@ fun SettingsDialog(
                 )
 
                 HorizontalDivider(
-                    color = if (isSystemInDarkTheme()) Color(0xFF43493E) else Color(0xFFC6C8B9),
+                    color = if (isSystemInDarkTheme()) Color(0xFF1E293B) else Color(0xFFC6C8B9),
                     thickness = 1.dp
                 )
 
@@ -1061,7 +1061,7 @@ fun SettingsDialog(
                 )
 
                 HorizontalDivider(
-                    color = if (isSystemInDarkTheme()) Color(0xFF43493E) else Color(0xFFC6C8B9),
+                    color = if (isSystemInDarkTheme()) Color(0xFF1E293B) else Color(0xFFC6C8B9),
                     thickness = 1.dp
                 )
 
@@ -1074,7 +1074,7 @@ fun SettingsDialog(
                 )
 
                 HorizontalDivider(
-                    color = if (isSystemInDarkTheme()) Color(0xFF43493E).copy(alpha = 0.5f) else Color(0xFFC6C8B9).copy(alpha = 0.5f),
+                    color = if (isSystemInDarkTheme()) Color(0xFF1E293B).copy(alpha = 0.5f) else Color(0xFFC6C8B9).copy(alpha = 0.5f),
                     thickness = 1.dp
                 )
 
@@ -1136,7 +1136,7 @@ fun SettingAdjuster(
                     .size(width = 60.dp, height = 48.dp),
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (isSystemInDarkTheme()) Color(0xFF386A20) else Color(0xFFE7E9D9),
+                    containerColor = if (isSystemInDarkTheme()) Color(0xFF0F172A) else Color(0xFFE7E9D9),
                     contentColor = if (isSystemInDarkTheme()) Color.White else Color(0xFF386A20)
                 ),
                 contentPadding = PaddingValues(0.dp)
@@ -1159,7 +1159,7 @@ fun SettingAdjuster(
                     .size(width = 60.dp, height = 48.dp),
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (isSystemInDarkTheme()) Color(0xFF386A20) else Color(0xFFE7E9D9),
+                    containerColor = if (isSystemInDarkTheme()) Color(0xFF0F172A) else Color(0xFFE7E9D9),
                     contentColor = if (isSystemInDarkTheme()) Color.White else Color(0xFF386A20)
                 ),
                 contentPadding = PaddingValues(0.dp)
