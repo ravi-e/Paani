@@ -1,0 +1,6 @@
+{
+  "name": "Water Reminder",
+  "description": "An easy-to-use, highly accessible water drinking reminder app designed specifically for senior citizens, featuring massive touch targets and simple time-of-day settings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
