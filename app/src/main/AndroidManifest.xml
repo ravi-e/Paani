@@ -4,9 +4,11 @@
 
     <!-- Senior Friendly Water Reminder Permissions -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <!-- Continuous alarm looping permissions -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
 
     <application
         android:allowBackup="true"
@@ -30,22 +32,16 @@
             </intent-filter>
         </activity>
 
-        <!-- Broadcast Receivers configuration -->
-        <receiver
-            android:name="com.example.receiver.WaterReminderReceiver"
-            android:exported="true" />
+        <!-- Continuous Alarm Foreground Service -->
+        <service
+            android:name="com.example.receiver.WaterAlarmService"
+            android:foregroundServiceType="mediaPlayback"
+            android:exported="false" />
 
+        <!-- Broadcast Receivers configuration -->
         <receiver
             android:name="com.example.receiver.WaterActionReceiver"
             android:exported="true" />
-
-        <receiver
-            android:name="com.example.receiver.BootReceiver"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
 
     </application>
 
