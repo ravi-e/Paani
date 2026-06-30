@@ -1,0 +1,30 @@
+name: paani
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.1.0
+  provider: ^6.1.1
+  sqflite: ^2.3.0
+  path: ^1.9.0
+  flutter_local_notifications: ^17.0.0
+  android_alarm_manager_plus: ^4.0.0
+  flutter_tts: ^3.8.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_driver:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+

@@ -24,3 +24,18 @@ local.properties
 
 # Log Files
 *.log
+
+# Flutter/Dart files
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+
+# Agent-specific files
+.agents/
+... (needs absolute path)
+
+# Local Backups
+backup.py
+native_android_backup/
+
